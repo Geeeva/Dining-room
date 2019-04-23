@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Geeeva/Dining-room.git/precache-manifest.98385d352e45b2c6f0f07ab5255b769a.js"
+  "/Geeeva/Dining-room.git/precache-manifest.2af51f35573fbfa2ac445a5201b45160.js"
 );
 
 workbox.clientsClaim();

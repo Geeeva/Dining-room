@@ -12,31 +12,27 @@ self.__precacheManifest = [
     "url": "/Geeeva/Dining-room.git/static/media/Roboto-Light.fc84e998.ttf"
   },
   {
-    "revision": "bf2cf3894573bf5c075d9a377abf32d5",
-    "url": "/Geeeva/Dining-room.git/static/media/Inter-ExtraBold.bf2cf389.ttf"
-  },
-  {
     "revision": "afa481d23570496ef317",
     "url": "/Geeeva/Dining-room.git/static/js/runtime~main.db608bed.js"
   },
   {
-    "revision": "c90eb9b795fe4690a869",
-    "url": "/Geeeva/Dining-room.git/static/js/main.e6f9bf2e.chunk.js"
+    "revision": "d0eca1d567bf3c469d37",
+    "url": "/Geeeva/Dining-room.git/static/js/main.e9a7ad16.chunk.js"
   },
   {
     "revision": "a19c80921963fa54de89",
     "url": "/Geeeva/Dining-room.git/static/js/2.380e6c34.chunk.js"
   },
   {
-    "revision": "c90eb9b795fe4690a869",
-    "url": "/Geeeva/Dining-room.git/static/css/main.1faf7a4e.chunk.css"
+    "revision": "d0eca1d567bf3c469d37",
+    "url": "/Geeeva/Dining-room.git/static/css/main.6ccaf344.chunk.css"
   },
   {
     "revision": "a19c80921963fa54de89",
     "url": "/Geeeva/Dining-room.git/static/css/2.f42f2e29.chunk.css"
   },
   {
-    "revision": "0220c463dc9e6c7ecddc008516c99c23",
+    "revision": "404e903e8fcba4a7fc10e7d7b06fa167",
     "url": "/Geeeva/Dining-room.git/index.html"
   }
 ];
