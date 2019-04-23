@@ -44,7 +44,7 @@
         grid-template-columns: 30% 70%;
         .sidemenu {
             a {
-                font-size: 18px;
+                font-size: 17px;
                 li {
                     line-height: 40px;
                     span {
@@ -52,6 +52,12 @@
                         margin-right: 5px;
                     }
                 }
+            }
+        }
+        .home-route, .about-route {
+            h1 {
+                margin-top: 10px;
+                font-size: 18px;
             }
         }
         .restaurants-wrapper {

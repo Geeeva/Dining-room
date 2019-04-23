@@ -6,6 +6,7 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
+    
     switch(action.type) {
         
         case "SET_INITIAL_PAGE":
@@ -14,20 +15,20 @@ const reducer = (state = initialState, action) => {
             currentPage: 1
         }
 
-        case "SET_MAX_PAGES":
+        case "SET_MAX_PAGES":{
         return {
             ...state,
             lastPage: action.maxPages
-        }
+        }}
 
-        case "SET_FIRST_PAGE":
+        case "SET_FIRST_PAGE":{
         return {
             ...state,
             currentPage: 1
-        }
+        }}
        
-        case "NEXT_PAGE":
-        if(state.currentPage == state.lastPage){
+        case "NEXT_PAGE":{
+        if(state.currentPage === state.lastPage){
             return {
                 ...state,
                 currentPage: state.lastPage,
@@ -37,9 +38,9 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 currentPage: state.currentPage + 1,
             }
-        }
+        }} break;
 
-        case "PREVIOUS_PAGE":
+        case "PREVIOUS_PAGE":{
         if(state.currentPage <= 1){
             return {
                 ...state,
@@ -50,7 +51,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 currentPage: state.currentPage - 1,
             }
-        }
+        }} break;
 
         case "SET_LAST_PAGE":
         return {
@@ -69,8 +70,9 @@ const reducer = (state = initialState, action) => {
             ...state,
             topValue: action.value
         }
+        default:
+        return state;
     }
-    return state;
 };
 
 export default reducer;

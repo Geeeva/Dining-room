@@ -7,14 +7,15 @@ const modal = props => {
     let days = props.data.days;
     let totalWorkingDaysHours = [];
 
+    /*Cretaing Object with working days & hours*/
     for(let key in days){
-    let workingDay = {day: key};
-    let workingDaysHours = Object.assign(workingDay, days[key]);
-    let workingDaysHoursValues = Object.values(workingDaysHours);
-    totalWorkingDaysHours.push(workingDaysHoursValues);
+        let workingDay = {day: key};
+        let workingDaysHours = Object.assign(workingDay, days[key]);
+        let workingDaysHoursValues = Object.values(workingDaysHours);
+        totalWorkingDaysHours.push(workingDaysHoursValues);
     }
 
-    /*Replacing numbers with days*/
+    /*Replacing numbers with days when creating array with working days & hours*/
     let arrayTotalWorkingDaysHours = Object.values(totalWorkingDaysHours).map((item, index) => {
         const Days = {1: "Monday", 2: "Tuesday", 3: "Wednesday", 4: "Thursday", 5: "Friday", 6: "Saturday", 7: "Sunday"};
         for(let key in Days){

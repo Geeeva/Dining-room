@@ -41,4 +41,5 @@ const mapDispatchToProps = dispatch => {
         topChanged: (value) => dispatch({type: 'TOP_CHANGED', value}),
     }
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(Pagination);

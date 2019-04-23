@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, NavLink, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import SideMenu from '../components/SideMenu/SideMenu';
 import Home from '../components/Home/Home';
 import About from '../components/About/About';

@@ -43,8 +43,9 @@
     .home-route, .about-route {
         grid-column: 2 / 3;
         grid-row: 1 / 3;
-        margin: 15px;
-        h2 {
+        margin: 15px 20px;
+        h1 {
+            font-size: 30px;
             margin-bottom: 15px;
         }
     }
