@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Geeeva/Dining-room.git/precache-manifest.2af51f35573fbfa2ac445a5201b45160.js"
+  "/Dining-room/precache-manifest.295191d5a920044d5965148a5daa8eca.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Geeeva/Dining-room.git/index.html", {
+workbox.routing.registerNavigationRoute("/Dining-room/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
