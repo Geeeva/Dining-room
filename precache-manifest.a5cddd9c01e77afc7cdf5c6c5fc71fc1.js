@@ -16,15 +16,15 @@ self.__precacheManifest = [
     "url": "/Dining-room/static/js/runtime~main.47079a01.js"
   },
   {
-    "revision": "c96dd67899d23eabf8a1",
-    "url": "/Dining-room/static/js/main.c4226918.chunk.js"
+    "revision": "82d4222f86360d68f59e",
+    "url": "/Dining-room/static/js/main.d53b478e.chunk.js"
   },
   {
     "revision": "a19c80921963fa54de89",
     "url": "/Dining-room/static/js/2.380e6c34.chunk.js"
   },
   {
-    "revision": "c96dd67899d23eabf8a1",
+    "revision": "82d4222f86360d68f59e",
     "url": "/Dining-room/static/css/main.32b6ca4c.chunk.css"
   },
   {
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/Dining-room/static/css/2.f42f2e29.chunk.css"
   },
   {
-    "revision": "a029707dce6075fc2fd75c9732728818",
+    "revision": "18803679a258b00e19a2d1aedb41648a",
     "url": "/Dining-room/index.html"
   }
 ];

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Dining-room/precache-manifest.295191d5a920044d5965148a5daa8eca.js"
+  "/Dining-room/precache-manifest.a5cddd9c01e77afc7cdf5c6c5fc71fc1.js"
 );
 
 workbox.clientsClaim();
