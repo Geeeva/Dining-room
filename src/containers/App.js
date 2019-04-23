@@ -20,7 +20,7 @@ class App extends Component {
     }
     render() {
         return (
-            <Router>
+            <Router basename="/Dining-room/">
                 <header>
                     <div className="container-fluid">
                         <div className="cover-wrapper">
