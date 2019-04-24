@@ -1,12 +1,11 @@
 const initialState = {
-    lastPage: '',
     currentPage: 1,
+    maxPages: '',
     bottomValue: 1,
     topValue: 10
 };
 
 const reducer = (state = initialState, action) => {
-    
     switch(action.type) {
         
         case "SET_INITIAL_PAGE":
@@ -15,50 +14,58 @@ const reducer = (state = initialState, action) => {
             currentPage: 1
         }
 
-        case "SET_MAX_PAGES":{
-        return {
-            ...state,
-            lastPage: action.maxPages
-        }}
-
         case "SET_FIRST_PAGE":{
+            return {
+                ...state,
+                currentPage: 1
+            }}
+
+        case "SET_CURRENT_PAGE":{
         return {
             ...state,
-            currentPage: 1
+            currentPage: parseInt(action.number)
         }}
-       
-        case "NEXT_PAGE":{
-        if(state.currentPage === state.lastPage){
-            return {
-                ...state,
-                currentPage: state.lastPage,
-            }
-        } else if(state.currentPage < state.lastPage){
-            return {
-                ...state,
-                currentPage: state.currentPage + 1,
-            }
-        }} break;
 
-        case "PREVIOUS_PAGE":{
+        case "SET_LAST_PAGE":
+        if(state.currentPage === 1){
+            return {
+                ...state, 
+                currentPage: 0
+            }
+        } else {
+            return {
+            ...state,
+            currentPage: parseInt(action.maxPages)
+            }
+        }
+
+        case 'NEXT_PAGE':
+        if(state.currentPage === action.maxPages){
+            return {
+                ...state, 
+                currentPage: parseInt(action.maxPages)
+            }
+        } else {
+            return {
+                ...state,
+                currentPage: parseInt(state.currentPage + 1)
+            }
+        }
+
+        case "PREVIOUS_PAGE":
         if(state.currentPage <= 1){
             return {
                 ...state,
                 currentPage: 1,
             }
-        } else if(state.currentPage >= 2){
+        } else {
             return {
                 ...state,
-                currentPage: state.currentPage - 1,
+                currentPage: parseInt(state.currentPage - 1),
             }
-        }} break;
-
-        case "SET_LAST_PAGE":
-        return {
-            ...state,
-            currentPage: state.lastPage
         }
 
+        /*Changing filters values*/
         case "BOTTOM_CHANGED":
         return {
             ...state,

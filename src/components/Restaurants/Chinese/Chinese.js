@@ -12,7 +12,7 @@ class Chinese extends Component {
         if(this.props.data.length > 1){
             maxPages = Math.ceil(this.props.data.length / maxPerPage)
         }
-
+        
         const restaurants = [].concat(this.props.data)
         .sort((a, b) => b.rating - a.rating)
         .filter(restaurant => {

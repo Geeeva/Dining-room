@@ -4,18 +4,35 @@ import {connect} from 'react-redux';
 class Pagination extends Component {
     constructor(props) {
         super(props)
-        this.props.setMax(this.props.maxPages);
-        this.props.setInitialPage(this.props.initialPage);
+        this.props.endHandler(this.props.maxPages);
+        this.props.nextHandler(this.props.maxPages);
     }
 
-    render () {
+    render () {   
+        const pageNumbers = [];
+        for (let i = 1; i <= this.props.maxPages; i++) {
+            pageNumbers.push(i);
+        }
+        const renderPageNumbers = pageNumbers.map(number => {
+            return (
+                <li
+                    className={(this.props.currentPage === number? 'active' : '')}
+                    key={number}
+                    id={number}
+                    onClick={(event) => this.props.currentPageHandler(event.target.textContent)}
+                >
+                {number}
+              </li>
+            );
+        });
+
         return (
             <div className="pagination">
                 <button className="begin" onClick={this.props.beginHandler}>&#171;</button>
                 <button onClick={this.props.previousHandler}>&#8249;</button>
-                <span>{this.props.currentPage}</span>
-                <button onClick={this.props.nextHandler}>&#8250;</button>
-                <button className="end" onClick={this.props.endHandler}>&#187;</button> 
+                <ul className="numbers">{renderPageNumbers}</ul>
+                <button className="next" onClick={() => this.props.nextHandler(this.props.maxPages)}>&#8250;</button>
+                <button className="end" onClick={() => this.props.endHandler(this.props.maxPages)}>&#187;</button>
             </div>
         )
     }
@@ -24,21 +41,16 @@ class Pagination extends Component {
 const mapStateToProps = state => {
     return {
         currentPage: state.currentPage,
-        bottomValue: state.bottomValue,
-        topValue: state.topValue
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        setInitialPage: (initialPage) => dispatch({type: 'SET_INITIAL_PAGE', initialPage}),
-        setMax: (maxPages) => dispatch({type: 'SET_MAX_PAGES', maxPages}),
         beginHandler: () => dispatch({type: 'SET_FIRST_PAGE'}),
-        nextHandler: () => dispatch({type: 'NEXT_PAGE'}),
+        nextHandler: (maxPages) => dispatch({type: 'NEXT_PAGE', maxPages}),
+        currentPageHandler: (number) => dispatch({type: 'SET_CURRENT_PAGE', number}),
         previousHandler: () => dispatch({type: 'PREVIOUS_PAGE'}),
-        endHandler: () => dispatch({type: 'SET_LAST_PAGE'}),
-        bottomChanged: (value) => dispatch({type: 'BOTTOM_CHANGED', value}),
-        topChanged: (value) => dispatch({type: 'TOP_CHANGED', value}),
+        endHandler: (maxPages) => dispatch({type: 'SET_LAST_PAGE', maxPages}),
     }
 };
 
