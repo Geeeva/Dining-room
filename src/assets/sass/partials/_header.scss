@@ -57,7 +57,13 @@ button {
 	max-width: 100%;
 }
 
-@media (min-width: 414px) {
+@media (min-width: 320px) {
+    .container {
+        width: 300px;
+    }
+}
+
+@media (min-width: 410px) {
     .container {
         width: 430px;
     }
