@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {Helmet} from "react-helmet";
 import Pagination from '../Pagination/Pagination';
 import Filter from '../Filter/Filter';
 import Restaurant from '.././Restaurant/Restaurant';
@@ -33,13 +34,25 @@ class Chinese extends Component {
         })
 
         return (
-            <div className="german restaurants">
-                <Pagination initialPage={initialPage} maxPages={maxPages} />
-                <Filter />
-                <div className="restaurants-content">
-                {renderCurrentPage}
+            <React.Fragment>
+                <Helmet>
+                    <title>The Dining Room | Chinese Couisine</title>
+                    <meta name="keywords" 
+                        content="food, meal, snack, vegan, China "
+                    />
+                    <meta
+                        name="description"
+                        content="Selection of best Chinese restaurants"
+                    />
+                </Helmet>
+                <div className="german restaurants">
+                    <Pagination initialPage={initialPage} maxPages={maxPages} />
+                    <Filter />
+                    <div className="restaurants-content">
+                    {renderCurrentPage}
+                    </div>
                 </div>
-            </div>
+            </React.Fragment>
         );
     }  
 }
